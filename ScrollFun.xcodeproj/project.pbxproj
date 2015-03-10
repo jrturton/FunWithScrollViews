@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		79EF8E791AA98A7000DD17F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF8E781AA98A7000DD17F8 /* AppDelegate.swift */; };
-		79EF8E7B1AA98A7000DD17F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF8E7A1AA98A7000DD17F8 /* ViewController.swift */; };
 		79EF8E7E1AA98A7000DD17F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EF8E7C1AA98A7000DD17F8 /* Main.storyboard */; };
 		79EF8E801AA98A7000DD17F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79EF8E7F1AA98A7000DD17F8 /* Images.xcassets */; };
 		79EF8E831AA98A7000DD17F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EF8E811AA98A7000DD17F8 /* LaunchScreen.xib */; };
 		79EF8E8F1AA98A7000DD17F8 /* ScrollFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF8E8E1AA98A7000DD17F8 /* ScrollFunTests.swift */; };
+		79EF8E991AA98BBD00DD17F8 /* ScrollDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF8E981AA98BBD00DD17F8 /* ScrollDetailsTableViewController.swift */; };
+		79EF8E9B1AA98D5700DD17F8 /* ScrollContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF8E9A1AA98D5700DD17F8 /* ScrollContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		79EF8E731AA98A7000DD17F8 /* ScrollFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EF8E771AA98A7000DD17F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79EF8E781AA98A7000DD17F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79EF8E7A1AA98A7000DD17F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79EF8E7D1AA98A7000DD17F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79EF8E7F1AA98A7000DD17F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		79EF8E821AA98A7000DD17F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		79EF8E881AA98A7000DD17F8 /* ScrollFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EF8E8D1AA98A7000DD17F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79EF8E8E1AA98A7000DD17F8 /* ScrollFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollFunTests.swift; sourceTree = "<group>"; };
+		79EF8E981AA98BBD00DD17F8 /* ScrollDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollDetailsTableViewController.swift; sourceTree = "<group>"; };
+		79EF8E9A1AA98D5700DD17F8 /* ScrollContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				79EF8E781AA98A7000DD17F8 /* AppDelegate.swift */,
-				79EF8E7A1AA98A7000DD17F8 /* ViewController.swift */,
 				79EF8E7C1AA98A7000DD17F8 /* Main.storyboard */,
 				79EF8E7F1AA98A7000DD17F8 /* Images.xcassets */,
 				79EF8E811AA98A7000DD17F8 /* LaunchScreen.xib */,
 				79EF8E761AA98A7000DD17F8 /* Supporting Files */,
+				79EF8E981AA98BBD00DD17F8 /* ScrollDetailsTableViewController.swift */,
+				79EF8E9A1AA98D5700DD17F8 /* ScrollContainerViewController.swift */,
 			);
 			path = ScrollFun;
 			sourceTree = "<group>";
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79EF8E7B1AA98A7000DD17F8 /* ViewController.swift in Sources */,
 				79EF8E791AA98A7000DD17F8 /* AppDelegate.swift in Sources */,
+				79EF8E991AA98BBD00DD17F8 /* ScrollDetailsTableViewController.swift in Sources */,
+				79EF8E9B1AA98D5700DD17F8 /* ScrollContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
