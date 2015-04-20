@@ -10,6 +10,8 @@ import UIKit
 
 @objc protocol ScrollViewListener {
     func updateForScrollview(scrollView : UIScrollView) -> Void
+    func scrollViewDelegateHit(message: String, details: String?) -> Void
+    func clearMessages() -> Void
 }
 
 class ScrollContainerViewController: UIViewController {
@@ -93,7 +95,32 @@ extension ScrollContainerViewController {
 }
 
 extension ScrollContainerViewController : UIScrollViewDelegate {
+  
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        scrollViewListener?.clearMessages()
+        scrollViewListener?.scrollViewDelegateHit("scrollViewWillBeginDragging",details:nil)
+    }
+  
     func scrollViewDidScroll(scrollView: UIScrollView) {
         scrollViewListener?.updateForScrollview(scrollView)
+        scrollViewListener?.scrollViewDelegateHit("scrollViewDidScroll",details:nil)
+    }
+    
+    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        scrollViewListener?.scrollViewDelegateHit("scrollViewWillEndDragging",details:"velocity \(velocity.rounded()) targetOffset \(targetContentOffset.memory.rounded())")
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        scrollViewListener?.scrollViewDelegateHit("scrollViewDidEndDragging", details:"will decelerate \(decelerate)")
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        scrollViewListener?.scrollViewDelegateHit("scrollViewDidEndDecelerating",details:nil)
+    }
+}
+
+extension CGPoint {
+    func rounded() -> CGPoint {
+        return CGPoint(x: round(self.x), y: round(self.y))
     }
 }
